@@ -2,7 +2,7 @@
 // Remember to pay attention to page loading!
 function init () {
 
-    const takeoff = document.getElementById("takeoff");
+    const takeoffButton = document.getElementById("takeoff");
     const landing = document.getElementById("landing");
     const flightStatus = document.getElementById("flightStatus");
     const shuttleBackground = document.getElementById("shuttleBackground");
@@ -11,11 +11,13 @@ function init () {
 //When the "Land" button is clicked, the following should happen:
 
 
-    takeoff.addEventListener("click", function() {
+    takeoffButton.addEventListener("click", function() {
+        let isReady = window.confirm("Confirm that the shuttle is ready for takeoff.") 
+        if (isReady) {
         console.log("first event listener test.");
-        flightStatus.innerHTML = "The shuttle has landed!";
+        flightStatus.innerHTML = "Shuttle in flight!";
         shuttleBackground.style.backgroundColor = "blue";
-
+        }
     });
 
 };
