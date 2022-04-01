@@ -11,8 +11,9 @@ function init () {
 
 
     takeoff.addEventListener("click", function() {
-        ale
-    })
+        console.log("first event listener test.")
+    });
 
 };
 
+window.addEventListener("load", init);
